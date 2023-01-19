@@ -13,7 +13,7 @@ app.use(cors());
 app.use("/", userRoute);
 app.get("/", (req, res) => res.send("Hello"));
 
-mongoose.connect("mongodb://127.0.0.1:27017/mock11").then(() => {
+mongoose.connect("mongodb+srv://masthotel:masthotel@masthotel.orap6vu.mongodb.net/mock11?retryWrites=true&w=majority").then(() => {
   app.listen(config.port, () => {
     console.log(`Server started on ${config.port}`);
   });
